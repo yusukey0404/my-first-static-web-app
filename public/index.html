@@ -19,8 +19,19 @@
     <script>
       function login() {
     window.location.href = '/.auth/login/aad';
+        SN_CSM_EC.onLogin();
   }
 
     </script>
+    <script src="https://dev83448.service-now.com/scripts/sn_csm_ec.js?v=5.3"></script>
+<script>
+SN_CSM_EC.init({
+	moduleID: "https://dev83448.service-now.com/#46e298f3976ae110dc80b027f053affc",
+	loadFeature: SN_CSM_EC.loadEMFeature()
+});
+
+/* Call SN_CSM_EC.onLogin() function to start the user session in the Engagement Messenger automatically when the user logs in to the main portal */
+/* Call SN_CSM_EC.onLogout() function to terminate the user session in the Engagement Messenger automatically when the user logs out from the main portal */
+</script>
   </body>
 </html>

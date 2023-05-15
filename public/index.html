@@ -13,13 +13,12 @@
     </ul>
     <p>That's it for now. Thanks for visiting!</p>
     <p>Please click the button below to login:</p>
-    <button onclick="SN_CSM_EC.onLogin()">Login with Azure ADtest</button>
+    <button onclick="login()">Login with Azure ADtest</button>
 
     <script src="/.auth/login/aad"></script>
     <script>
       function login() {
     window.location.href = '/.auth/login/aad';
-        //SN_CSM_EC.onLogin();
   }
 
     </script>
@@ -29,7 +28,7 @@ SN_CSM_EC.init({
 	moduleID: "https://dev83448.service-now.com/#46e298f3976ae110dc80b027f053affc",
 	loadFeature: SN_CSM_EC.loadEMFeature()
 });
-
+SN_CSM_EC.onLogin();
 /* Call SN_CSM_EC.onLogin() function to start the user session in the Engagement Messenger automatically when the user logs in to the main portal */
 /* Call SN_CSM_EC.onLogout() function to terminate the user session in the Engagement Messenger automatically when the user logs out from the main portal */
 </script>

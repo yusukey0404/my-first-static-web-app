@@ -1,17 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title><%= htmlWebpackPlugin.options.title %></title>
-  </head>
-  <body>
-    <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-  </body>
+<html>
+<head>
+    <title>ラクダのプロフィール</title>
+    <style>
+        /* CSSスタイルシート */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            width: 100px;
+            height: 100px;
+        }
+
+        .nav {
+            margin-left: auto;
+        }
+
+            .nav ul {
+                list-style: none;
+                display: flex;
+            }
+
+            .nav li {
+                margin: 0 10px;
+            }
+
+            .nav a {
+                text-decoration: none;
+                color: black;
+            }
+
+        .profile {
+            display: flex;
+            margin-top: 20px;
+        }
+
+        .profile-image {
+            width: 300px;
+            height: 300px;
+        }
+
+        .profile-info {
+            margin-left: 20px;
+        }
+
+        .profile-name {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .profile-bio {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="logo.png" alt="ロゴ" class="logo">
+            <div class="nav">
+                <ul>
+                    <li><a href="#">ホーム</a></li>
+                    <li><a href="#">サービス</a></li>
+                    <li><a href="#">お問い合わせ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="profile">
+            <img src="camel.jpg" alt="ラクダ" class="profile-image">
+            <div class="profile-info">
+                <div class="profile-name">カミール・ラクダ</div>
+                <div class="profile-bio">私はプロフェッショナルなラクダです。砂漠で長距離を移動するのが得意です。趣味は水を飲むことと砂に埋もれることです。</div>
+            </div>
+        </div>
+    </div>
+    <script src="https://dev142907.service-now.com/scripts/sn_csm_ec.js?v=5.2"></script>
+    <script>
+SN_CSM_EC.init({
+	moduleID: "https://dev142907.service-now.com/#e3215e66976521102f1c3dafe153afd9",
+	loadFeature: SN_CSM_EC.loadEMFeature()
+});
+
+/* Call SN_CSM_EC.onLogin() function to start the user session in the Engagement Messenger automatically when the user logs in to the main portal */
+/* Call SN_CSM_EC.onLogout() function to terminate the user session in the Engagement Messenger automatically when the user logs out from the main portal */
+    </script>
+</body>
 </html>

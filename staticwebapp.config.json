@@ -1,8 +1,8 @@
 {
-    "navigationFallback": {
-        "rewrite": "/index.html"
-    },
-    "globalHeaders": {
-      "content-security-policy": "frame-ancestors 'self' https://dev83448.service-now.com/"
-  }
+	"navigationFallback": {
+		"rewrite": "/index.html"
+	},
+	"globalHeaders": {
+		"content-security-policy": "frame-ancestors 'self' https://dev83448.service-now.com/"
+	}
 }

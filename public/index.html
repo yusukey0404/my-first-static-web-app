@@ -1,17 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title><%= htmlWebpackPlugin.options.title %></title>
+    <title>My Static Web Page</title>
   </head>
   <body>
-    <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
+    <h1>Welcome to My Static Web Page!</h1>
+    <p>This is a sample paragraph of text that could go on for a little while. It's not terribly exciting, but it will do for the purposes of this example.</p>
+    <ul>
+      <li>List item 1</li>
+      <li>List item 2</li>
+      <li>List item 3</li>
+    </ul>
+    <p>That's it for now. Thanks for visiting!</p>
+    <p>Please click the button below to login:</p>
+    <button onclick="login()">Login with Azure ADtest</button>
+
+    <script src="/.auth/login/aad"></script>
+    <script>
+      function login() {
+    window.location.href = '/.auth/login/aad';
+  }
+
+    </script>
+    <script src="https://dev83448.service-now.com/scripts/sn_csm_ec.js?v=5.3"></script>
+<script>
+SN_CSM_EC.init({
+	moduleID: "https://dev83448.service-now.com/#46e298f3976ae110dc80b027f053affc",
+	loadFeature: SN_CSM_EC.loadEMFeature()
+});
+SN_CSM_EC.onLogin();
+/* Call SN_CSM_EC.onLogin() function to start the user session in the Engagement Messenger automatically when the user logs in to the main portal */
+/* Call SN_CSM_EC.onLogout() function to terminate the user session in the Engagement Messenger automatically when the user logs out from the main portal */
+</script>
   </body>
 </html>
